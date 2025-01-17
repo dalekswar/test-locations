@@ -18,6 +18,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 20px; /* Отступы между элементами */
+  margin-bottom: 20px;
 }
 
 .form-item {
@@ -104,4 +105,35 @@ select {
 .console-button {
   background-color: #28a745;
   color: white;
+}
+
+/* Стиль для контейнера выпадающего списка */
+.form-item select {
+  -webkit-appearance: none; /* Убираем стандартный стиль браузера */
+  -moz-appearance: none;
+  appearance: none;
+  padding: 10px 40px 10px 30px; /* Отступы: слева для иконки, справа для стрелки */
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 40px; /* Увеличиваем высоту */
+  background-color: #fff;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 width%3D%2210%22 height%3D%2210%22 viewBox%3D%220 0 10 10%22%3E%3Cpath d%3D%22M0 0h10L5 5z%22 fill%3D%22%23333%22/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Значок слева внутри выпадающего списка */
+.form-item select::placeholder,
+.form-item label i {
+  font-size: 14px;
+  color: #333;
+  margin-right: 5px;
+}
+
+/* Убираем стрелку на некоторых браузерах */
+.form-item select::-ms-expand {
+  display: none;
 }
